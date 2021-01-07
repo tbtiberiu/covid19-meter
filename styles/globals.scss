@@ -1,0 +1,36 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Cairo;
+}
+
+footer {
+  border-top: 2px solid #222222;
+  margin-top: 30px;
+  padding: 8px 7%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Cairo;
+  src: url(/fonts/Cairo/Cairo-Regular.ttf);
+}
+
+@font-face {
+  font-family: Cairo-Bold;
+  src: url(/fonts/Cairo/Cairo-Bold.ttf);
+}
