@@ -10,6 +10,7 @@ interface Props {
 const Chart = ({ label, data, dates, color }: Props) => {
   return (
     <div className="chart">
+      {/* @ts-ignore */}
       <Line
         data={{
           labels: dates,

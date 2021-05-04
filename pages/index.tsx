@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import Navbar from "../components/Navbar";
@@ -24,36 +23,23 @@ export default function Home({
   countries,
 }: Props) {
   return (
-    <div>
-      <Head>
-        <title>Covid-19 Meter</title>
-        <link rel="icon" href="/covid19-logo.png" />
-      </Head>
-
-      <main>
-        <Navbar />
-        <div className={styles.intro}>
-          <Summary cases={cases} deaths={deaths} recovers={recovers} />
-          <div className={styles.mapReport}>
-            <iframe src="https://www.trackcorona.live/map"></iframe>
-          </div>
+    <main>
+      <Navbar />
+      <div className={styles.intro}>
+        <Summary cases={cases} deaths={deaths} recovers={recovers} />
+        <div className={styles.mapReport}>
+          <iframe src="https://www.trackcorona.live/map"></iframe>
         </div>
-        <div className={styles.charts}>
-          <h2>Daily report of coronavirus cases and deaths - Globally</h2>
-          <DailyCharts dailyData={dailyData} />
-        </div>
-        <div className={styles.countries}>
-          <h2>
-            Daily report of coronavirus cases and deaths - For Each Country
-          </h2>
-          <TableCountries countries={countries} />
-        </div>
-      </main>
-
-      <footer>
-        <p>&copy; Made with 💙 by Boșcan Tiberiu-Ioan</p>
-      </footer>
-    </div>
+      </div>
+      <div className={styles.charts}>
+        <h2>Daily report of coronavirus cases and deaths - Globally</h2>
+        <DailyCharts dailyData={dailyData} />
+      </div>
+      <div className={styles.countries}>
+        <h2>Daily report of coronavirus cases and deaths - For Each Country</h2>
+        <TableCountries countries={countries} />
+      </div>
+    </main>
   );
 }
 
